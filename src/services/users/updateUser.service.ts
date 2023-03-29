@@ -1,8 +1,9 @@
-import AppDataSource from "../data-source";
-import User from "../entities/users.entity";
-import { AppError } from "../errors/AppErrors";
-import { iUserResponse, iUserUpdate } from "../Interfaces/User";
-import { userResponseSchema } from "../schemas/createUser.schema"
+import AppDataSource from "../../data-source"
+import User from "../../entities/users.entity"
+import { AppError } from "../../errors/AppErrors"
+import { iUserResponse, iUserUpdate } from "../../Interfaces/User"
+import { userResponseSchema } from "../../schemas/createUser.schema"
+
 
 
 const updateUserService = async(userData: iUserUpdate, userId:string):Promise<iUserResponse> =>{

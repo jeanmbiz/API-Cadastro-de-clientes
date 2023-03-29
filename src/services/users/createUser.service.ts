@@ -1,10 +1,12 @@
-import AppDataSource from "../data-source";
-import User from "../entities/users.entity";
-import { AppError } from "../errors/AppErrors";
-import { iUserRequest, iUserResponse } from "../Interfaces/User";
-import { userResponseSchema } from "../schemas/createUser.schema";
+import AppDataSource from "../../data-source";
+import User from "../../entities/users.entity";
+import { AppError } from "../../errors/AppErrors";
+import { iUserRequest, iUserResponse } from "../../Interfaces/User";
+import { userResponseSchema } from "../../schemas/createUser.schema";
 
-const createUserService = async (userData: iUserRequest): Promise<iUserResponse> => {
+const createUserService = async (
+  userData: iUserRequest
+): Promise<iUserResponse> => {
   const userRepository = AppDataSource.getRepository(User);
 
   const userAreadyExists = await userRepository.findOneBy({

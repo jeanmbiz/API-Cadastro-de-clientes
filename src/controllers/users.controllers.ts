@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
 import { iUserRequest, iUserUpdate } from "../Interfaces/User";
-import { createUserService } from "../services/createUser.service";
-import deleteUserService from "../services/deleteUser.service";
-import listUserService from "../services/listUser.service";
-import updateUserService from "../services/updateUser.service";
+import { createUserService } from "../services/users/createUser.service";
+import deleteUserService from "../services/users/deleteUser.service";
+import listUserService from "../services/users/listUser.service";
+import updateUserService from "../services/users/updateUser.service";
 
 
 const createUserController = async (req: Request, res: Response) => {
@@ -30,4 +30,9 @@ const deleteUserController = async (req: Request, res: Response) => {
   return res.status(204).json(data);
 };
 
-export { createUserController, listUserController, updateUserController, deleteUserController };
+export {
+  createUserController,
+  listUserController,
+  updateUserController,
+  deleteUserController,
+};

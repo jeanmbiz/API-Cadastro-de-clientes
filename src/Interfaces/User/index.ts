@@ -15,10 +15,14 @@ export interface iUserResponse {
   updatedAt: Date;
 }
 
+export interface iUserUpdate {
+  name?: string;
+  email?: string;
+  password?: string;
+  phone?: string;
+}
 
-export interface iUserUpdate{
-  name?: string,
-  email?: string,
-  password?: string,
-  phone?: string
+export interface IUserLogin {
+  email: string;
+  password: string;
 }
