@@ -30,7 +30,7 @@ const createSessionService = async ({
 
   const token = jwt.sign(
     {
-      isAdm: user.isActive,
+      isActive: user.isActive,
     },
     process.env.SECRET_KEY,
     {

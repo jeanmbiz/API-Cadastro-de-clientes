@@ -10,6 +10,6 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "typeRoots": ["node_modules/yup"]
+    "typeRoots": ["@types", "node_modules/yup"]
   }
 }
