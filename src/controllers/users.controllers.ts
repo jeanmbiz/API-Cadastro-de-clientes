@@ -13,8 +13,8 @@ const createUserController = async (req: Request, res: Response) => {
 };
 
 const listUserController = async (req: Request, res: Response) => {
-  const user = await listUserService();
-  return res.json(user);
+  const users = await listUserService();
+  return res.json(users);
 };
 
 const updateUserController = async (req: Request, res: Response) => {

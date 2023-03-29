@@ -13,3 +13,9 @@ export interface iCustomerResponse {
   createdAt: Date;
   updatedAt: Date;
 }
+
+export interface iCustomerUpdate {
+  name?: string;
+  email?: string;
+  phone?: string;
+}
