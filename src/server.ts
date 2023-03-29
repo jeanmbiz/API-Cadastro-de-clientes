@@ -1,12 +1,13 @@
-import app from "./app"
-import AppDataSource from "./data-source"
+import app from "./app";
+import AppDataSource from "./data-source";
 
-AppDataSource.initialize().then(async () => {
-    console.log("Database connected.")
+AppDataSource.initialize()
+  .then(async () => {
+    console.log("Database connected.");
 
     const PORT = process.env.PORT || 3001;
     app.listen(PORT, () => {
-      console.log(`App is running on https://localhost:${PORT}`)
-    })
+      console.log(`App is running on https://localhost:${PORT}`);
+    });
   })
   .catch((err) => console.error(err));

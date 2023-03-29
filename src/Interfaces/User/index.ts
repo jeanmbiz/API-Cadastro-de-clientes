@@ -14,3 +14,11 @@ export interface iUserResponse {
   createdAt: Date;
   updatedAt: Date;
 }
+
+
+export interface iUserUpdate{
+  name?: string,
+  email?: string,
+  password?: string,
+  phone?: string
+}
