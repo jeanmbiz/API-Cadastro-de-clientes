@@ -10,8 +10,7 @@ const ensureIsUserAndActive: RequestHandler = async (
   req: CustomRequest,
   res: Response,
   next: NextFunction
-) => {
-  console.log('console aqui', req.userDecodedData.id == req.params.id)
+) => {  
   
   if (!req.userDecodedData.isActive || req.userDecodedData.id !== req.params.id) {
     throw new AppError("You don't have permission", 403);
