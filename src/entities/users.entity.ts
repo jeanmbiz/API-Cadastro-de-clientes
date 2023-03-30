@@ -41,8 +41,8 @@ class User {
     this.password = hashSync(this.password, 10);
   }
 
-  @OneToMany(() => Customers, (customer) => customer.user)
-  customer: Customers[];
+  @OneToMany(() => Customers, customer => customer.user)
+  customers: Customers[];
 }
 
 export default User;

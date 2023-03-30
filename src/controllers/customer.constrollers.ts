@@ -7,14 +7,16 @@ import deleteCustomerService from "../services/customers/deleteCustomer.service"
 
 // post
 const createCustomerController = async (req: Request, res: Response) => {
+  const userId = req.userDecodedData.id
   const customerData: iCustomerRequest = req.body;
-  const newCustomer = await createCustomerService(customerData);
+  const newCustomer = await createCustomerService(customerData, userId);
   return res.status(201).json(newCustomer);
 };
 
 // get
 const listCustomerController = async (req: Request, res: Response) => {
-  const customers = await listCustomerService()
+  const userId = req.userDecodedData.id
+  const customers = await listCustomerService(userId)
   return res.json(customers)
 };
 

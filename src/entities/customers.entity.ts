@@ -31,7 +31,7 @@ class Customers {
   @UpdateDateColumn()
   updatedAt: Date;
 
-  @ManyToOne(() => User)
+  @ManyToOne(() => User, user => user.customers)
   user: User;
 }
 

@@ -7,7 +7,7 @@ import { userUpdateSchema } from "../schemas/createUser.schema";
 
 const userRoutes = Router();
 
-userRoutes.get("", ensureAuthMiddleware, listUserController);
+userRoutes.get("", listUserController);
 userRoutes.post("", createUserController);
 userRoutes.patch("/:id", ensureAuthMiddleware, ensureIsUserAndActive, ensureDataIsValidMiddleware(userUpdateSchema), updateUserController);
 userRoutes.delete("/:id", ensureAuthMiddleware, ensureIsUserAndActive, deleteUserController);
