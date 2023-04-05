@@ -29,7 +29,6 @@ const ensureAuthMiddleware: RequestHandler = async (
       isActive: decoded.isActive,
     };
 
-
     return next();
   });
 };
